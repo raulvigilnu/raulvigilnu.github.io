@@ -1,1 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Raúl Vigil | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#ffffff;
+--text:#111827;
+--secondary:#6b7280;
+--accent:#2563eb;
+--card:#f8fafc;
+}
+
+.dark{
+--bg:#0f172a;
+--text:#f8fafc;
+--secondary:#94a3b8;
+--card:#1e293b;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+transition:.3s;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(10px);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.dark header{
+background:rgba(15,23,42,.85);
+}
+
+.logo{
+font-weight:800;
+font-size:1.2rem;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:var(--text);
+font-weight:500;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:100px 8%;
+gap:80px;
+}
+
+.hero img{
+width:380px;
+height:500px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.hero-text h1{
+font-size:4rem;
+line-height:1.1;
+}
+
+.hero-text h3{
+color:var(--accent);
+margin:20px 0;
+}
+
+.hero-text p{
+max-width:600px;
+color:var(--secondary);
+line-height:1.8;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:var(--accent);
+color:white;
+border-radius:12px;
+text-decoration:none;
+margin-right:10px;
+font-weight:600;
+}
+
+.btn-outline{
+background:transparent;
+border:2px solid var(--accent);
+color:var(--accent);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill{
+background:var(--card);
+padding:20px;
+border-radius:15px;
+text-align:center;
+font-weight:600;
+}
+
+.socials{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.socials a{
+text-decoration:none;
+color:white;
+background:var(--accent);
+padding:12px 20px;
+border-radius:12px;
+}
+
+footer{
+text-align:center;
+padding:50px;
+color:var(--secondary);
+}
+
+.theme-btn{
+cursor:pointer;
+padding:10px 15px;
+border:none;
+background:var(--accent);
+color:white;
+border-radius:10px;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+width:300px;
+height:400px;
+}
+
+.hero-text h1{
+font-size:2.7rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Raúl Vigil</div>
+
+<nav>
+<a href="#about">Sobre mí</a>
+<a href="#experience">Experiencia</a>
+<a href="#project">Proyecto</a>
+<a href="#skills">Habilidades</a>
+<a href="#contact">Contacto</a>
+</nav>
+
+<button class="theme-btn" onclick="toggleTheme()">
+🌙
+</button>
+
+</header>
+
+<section class="hero">
+
+<img src="perfil.jpg" alt="Raúl Vigil">
+
+<div class="hero-text">
+
+<h1>RAÚL<br>VIGIL</h1>
+
+<h3>International Business Administration Student</h3>
+
+<p>
+Adaptabilidad, liderazgo e innovación.
+Estudiante de Administración de Negocios Internacionales con experiencia en atención al cliente, operaciones y saneamiento ambiental.
+</p>
+
+<div class="buttons">
+
+<a href="cv.pdf" class="btn" download>
+Descargar CV
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Contacto
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">
+Sobre mí
+</h2>
+
+<p style="max-width:900px; line-height:2; color:var(--secondary);">
+
+Soy estudiante de Administración de Negocios Internacionales en la Universidad Católica San Pablo de Arequipa, Perú.
+Me caracterizo por mi versatilidad, capacidad de adaptación y manejo eficiente de situaciones de presión.
+Mis habilidades blandas me permiten desenvolverme con éxito tanto en entornos académicos como laborales, aportando liderazgo, comunicación efectiva y trabajo en equipo.
+
+</p>
+
+</section>
+
+<section id="experience">
+
+<h2 class="section-title">
+Experiencia
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>McDonald's</h3>
+<br>
+<p>
+Crew multifuncional.
+Experiencia en atención al cliente, cocina, caja y almacén.
+Reconocido como Crew del Mes en múltiples oportunidades.
+</p>
+</div>
+
+<div class="card">
+<h3>Vigil Fumigation</h3>
+<br>
+<p>
+Técnico de saneamiento ambiental.
+Participación en procesos de desinfección, uso de EPP y control de procedimientos operativos.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="project">
+
+<h2 class="section-title">
+Proyecto Destacado
+</h2>
+
+<div class="card">
+
+<h3>M.R.D</h3>
+
+<br>
+
+<p>
+
+Marca de ropa deportiva orientada al mercado fitness.
+Diseñada para ofrecer comodidad, estilo y rendimiento a personas que practican actividad física y entrenamiento de fuerza.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">
+Habilidades
+</h2>
+
+<div class="skills">
+
+<div class="skill">Liderazgo</div>
+<div class="skill">Comunicación</div>
+<div class="skill">Trabajo en Equipo</div>
+<div class="skill">Adaptabilidad</div>
+<div class="skill">Excel</div>
+<div class="skill">Inglés Intermedio</div>
+<div class="skill">Negocios Internacionales</div>
+<div class="skill">Resolución de Problemas</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">
+Contacto
+</h2>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/rauulvn" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.facebook.com/share/192u6nosrt/" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.linkedin.com/in/raul-roberto-carlos-vigil-nuñez-210411419" target="_blank">
+LinkedIn
+</a>
+
+<a href="https://www.tiktok.com/@rawlito0" target="_blank">
+TikTok
+</a>
+
+</div>
+
+<br><br>
+
+<p>
+📧 raul.vigil@ucsp.edu.pe
+</p>
+
+<p>
+📍 Arequipa, Perú
+</p>
+
+</section>
+
+<footer>
+
+© 2026 Raúl Roberto Carlos Vigil Núñez
+
+</footer>
+
+<script>
+
+function toggleTheme(){
+document.body.classList.toggle("dark");
+}
+
+</script>
+
+</body>
+</html>
